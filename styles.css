@@ -10,8 +10,8 @@
   --forest: #303c32;
   --gutter: clamp(24px,6vw,96px);
   --section: clamp(64px,7vw,112px);
-  --serif: "Cormorant Garamond",Georgia,serif;
-  --sans: "Manrope",Arial,sans-serif;
+  --serif: Georgia,"Times New Roman",serif;
+  --sans: Arial,Helvetica,sans-serif;
   --ease: cubic-bezier(.22,1,.36,1);
 }
 
@@ -220,15 +220,6 @@ em {
   color: var(--gold);
 }
 
-.title-spark {
-  display: inline-block;
-  font-size: .48em;
-  color: #af914e;
-  margin-left: 22px;
-  vertical-align: middle;
-  line-height: 1;
-}
-
 .hero-description {
   font-size: 14px;
   line-height: 1.85;
@@ -266,7 +257,7 @@ em {
 
 .button-gold {
   color: #fff;
-  background: linear-gradient(120deg,#987530,#806022);
+  background: #8a6829;
   box-shadow: 0 4px 12px #80602212;
 }
 
@@ -291,11 +282,6 @@ em {
   gap: 14px;
   align-items: center;
   margin-top: 36px;
-}
-
-.signature-icon {
-  font-size: 31px;
-  color: var(--gold);
 }
 
 .hero-signature p {
@@ -340,39 +326,6 @@ em {
   font-size: 10px;
   letter-spacing: 1.6px;
   text-shadow: 0 1px 4px #42301d;
-}
-
-.round-seal {
-  position: absolute;
-  z-index: 2;
-  left: -43px;
-  top: 36px;
-  width: 86px;
-  height: 86px;
-  background: var(--ivory);
-  border: 1px solid #c5b78f;
-  outline: 5px solid var(--ivory);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 8px;
-  line-height: 1.4;
-  letter-spacing: 1px;
-  color: var(--gold);
-  transform: rotate(-12deg);
-  box-shadow: 0 8px 24px #4b3e1d12;
-}
-
-.round-seal span {
-  font: italic 29px var(--serif);
-  letter-spacing: 0;
-}
-
-.round-seal b {
-  font-size: 16px;
-  font-weight: 400;
 }
 
 .scroll-cue {
@@ -482,46 +435,6 @@ h2 {
   gap: 28px;
 }
 
-.collection-art {
-  height: auto;
-  aspect-ratio: 1.25;
-  background: radial-gradient(ellipse at 38% 25%,#faf7ef,#e9e2d4);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #ded8c7;
-  border-radius: 4px;
-  transition: box-shadow .4s var(--ease);
-}
-
-.collection-art svg {
-  width: 76%;
-  height: 76%;
-  stroke: #927035;
-  stroke-width: 1.8;
-  filter: drop-shadow(0 7px 3px #8a682915);
-  transition: transform .6s var(--ease);
-}
-
-.collection-art>span {
-  position: absolute;
-  bottom: 22px;
-  left: 24px;
-  font-size: 10px;
-  letter-spacing: 1.6px;
-  color: #69624f;
-}
-
-.earrings-art {
-  background: radial-gradient(ellipse at 38% 25%,#f5f5ec,#dfe3d6);
-}
-
-.rings-art {
-  background: radial-gradient(ellipse at 38% 25%,#faf0e2,#e6d8c5);
-}
-
 .collection-label {
   display: flex;
   justify-content: space-between;
@@ -595,22 +508,6 @@ h2 {
   mix-blend-mode: multiply;
 }
 
-.brand-panel-bottom {
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
-  font-size: 10px;
-  letter-spacing: 1.6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-.brand-panel-bottom span {
-  color: var(--gold);
-  font-size: 18px;
-}
-
 .essence-copy>p:not(.eyebrow) {
   max-width: 440px;
   line-height: 1.9;
@@ -660,42 +557,6 @@ h2 {
 .button-light {
   background: #f4f0e5;
   color: var(--ink);
-}
-
-.wedding-symbol {
-  position: absolute;
-  width: 420px;
-  height: 290px;
-  right: max(2%,calc((100vw - 1480px)/2));
-  top: 100px;
-  pointer-events: none;
-}
-
-.wedding-symbol>span {
-  position: absolute;
-  left: 5%;
-  top: 18%;
-  width: 190px;
-  height: 190px;
-  border: 1px solid #baa571;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 5px #343c32,inset 0 0 0 6px #776c4c;
-  transform: rotate(-30deg) scaleY(.77);
-}
-
-.wedding-symbol>span:nth-child(2) {
-  left: 38%;
-  top: 5%;
-  transform: rotate(32deg) scaleX(.75);
-}
-
-.wedding-symbol b {
-  position: absolute;
-  right: 15%;
-  bottom: 18%;
-  font-size: 42px;
-  font-weight: 400;
-  color: #cab47c;
 }
 
 .faq {
@@ -781,16 +642,6 @@ details p {
   letter-spacing: 1.4px;
   margin-top: 27px;
   color: var(--muted);
-}
-
-.contact-spark {
-  position: absolute;
-  left: 12%;
-  top: 35%;
-  font-size: 100px;
-  color: #cfc2a1;
-  font-family: var(--serif);
-  pointer-events: none;
 }
 
 footer {
@@ -913,15 +764,6 @@ img {
   border-radius: 4px;
 }
 
-.collection-art:after {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border: 1px solid #ffffff70;
-  pointer-events: none;
-  border-radius: 2px;
-}
-
 details[open] {
   background: #f7f5ed;
 }
@@ -946,9 +788,6 @@ details[open] {
   .text-link:hover span {
     transform: translateX(4px);
   }
-  .collection-card:hover .collection-art svg {
-    transform: scale(1.07) rotate(-3deg);
-  }
   .collection-card:hover .collection-label>span {
     background: #e8dec5;
   }
@@ -961,9 +800,6 @@ details[open] {
   }
   .text-link:hover,summary:hover,.footer-top a:hover {
     color: var(--gold);
-  }
-  .collection-card:hover .collection-art {
-    box-shadow: 0 14px 30px #49433112;
   }
   .collection-card:hover .collection-label>span {
     background: var(--forest);
@@ -1017,9 +853,6 @@ details[open] {
   .collection-grid {
     gap: 20px;
   }
-  .collection-art {
-    aspect-ratio: 1;
-  }
   .collection-label {
     gap: 10px;
   }
@@ -1031,10 +864,6 @@ details[open] {
   }
   .brand-panel {
     padding: 26px;
-  }
-  .wedding-symbol {
-    right: -85px;
-    opacity: .6;
   }
 }
 
@@ -1082,15 +911,6 @@ details[open] {
   .hero .text-link {
     font-size: 12px;
   }
-  .round-seal {
-    left: -30px;
-    width: 72px;
-    height: 72px;
-    font-size: 7px;
-  }
-  .round-seal span {
-    font-size: 25px;
-  }
   .image-caption {
     left: 18px;
     right: 18px;
@@ -1116,15 +936,6 @@ details[open] {
   .collection-label>span {
     width: 36px;
     height: 36px;
-  }
-  .collection-art>span {
-    font-size: 9px;
-    left: 19px;
-    letter-spacing: 1px;
-  }
-  .brand-panel-bottom {
-    font-size: 9px;
-    letter-spacing: 1px;
   }
   .essence-copy>p:not(.eyebrow) {
     font-size: 14px;
@@ -1250,9 +1061,6 @@ details[open] {
     letter-spacing: -1.5px;
     margin-bottom: 22px;
   }
-  .title-spark {
-    margin-left: 18px;
-  }
   .hero-description {
     font-size: 14px;
     max-width: 440px;
@@ -1283,17 +1091,6 @@ details[open] {
   }
   .hero-visual>img {
     object-position: 50% 63%;
-  }
-  .round-seal {
-    width: 76px;
-    height: 76px;
-    left: -23px;
-    top: 24px;
-    font-size: 7px;
-    outline-width: 4px;
-  }
-  .round-seal span {
-    font-size: 27px;
   }
   .image-caption {
     font-size: 8px;
@@ -1346,16 +1143,6 @@ details[open] {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  .collection-art {
-    height: auto;
-    aspect-ratio: 1.2;
-  }
-  .collection-art svg {
-    max-width: 330px;
-  }
-  .collection-art>span {
-    font-size: 10px;
-  }
   .collection-label {
     padding: 19px 0;
   }
@@ -1401,13 +1188,6 @@ details[open] {
   .wedding p:not(.eyebrow) {
     font-size: 14px;
   }
-  .wedding-symbol {
-    top: auto;
-    bottom: -67px;
-    right: -95px;
-    transform: scale(.6);
-    opacity: .55;
-  }
   .faq {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -1436,12 +1216,6 @@ details[open] {
   .contact>p:not(.eyebrow) {
     font-size: 14px;
     max-width: 330px;
-  }
-  .contact-spark {
-    left: -24px;
-    top: 40%;
-    font-size: 75px;
-    opacity: .5;
   }
   .contact-location {
     font-size: 9px;
@@ -1528,10 +1302,6 @@ details[open] {
   .brand-panel {
     padding: 20px;
   }
-  .brand-panel-bottom {
-    font-size: 9px;
-    letter-spacing: 1px;
-  }
   .contact .button,.wedding .button {
     width: 100%;
     gap: 12px;
@@ -1551,3 +1321,26 @@ details[open] {
     transform: none;
   }
 }
+
+/* Loja: identidade original e informações de atendimento. */
+.hero-visual { display:flex; align-items:center; justify-content:center; min-height:540px; background:#eeece3; border:1px solid #dfd8c8; }
+.hero-visual > img { position:static; width:82%; height:auto; object-fit:contain; mix-blend-mode:multiply; }
+.hero-visual:after { display:none; }
+.image-caption { color:var(--muted); text-shadow:none; border-top:1px solid #d3ccba; padding-top:18px; }
+h1 { font-size:clamp(42px,4.5vw,72px); line-height:1.12; }
+.hero-signature { padding-top:20px; border-top:1px solid var(--line); max-width:420px; }
+.collection-card { padding:8px 24px 20px; border-top:2px solid var(--gold); background:#f1eee5; }
+.collection-label { min-height:128px; border-bottom:0; padding:24px 0 8px; }
+.collection-label h3 { font-size:30px; }
+.collection-note a { color:var(--ink); text-decoration:underline; text-underline-offset:4px; }
+.brand-panel { min-height:380px; background:#e9e7dc; box-shadow:none; }
+.brand-panel h3 { font-size:clamp(40px,4.5vw,64px); line-height:1.1; margin:12px 0 24px; }
+.brand-panel > p:not(.eyebrow) { font-size:15px; color:var(--muted); line-height:1.8; }
+.brand-panel .text-link { align-self:flex-start; }
+.essence-copy h2,.wedding h2,.faq h2 { font-size:clamp(36px,3.8vw,56px); }
+.wedding { min-height:0; background:var(--forest); }
+.wedding-content { width:100%; max-width:740px; }
+.wedding p:not(.eyebrow) { max-width:520px; }
+.contact h2 { font-size:clamp(36px,4.6vw,64px); }
+@media(max-width:900px) { .collection-grid { gap:16px; } .collection-card { padding-inline:18px; } .collection-label { gap:12px; flex-wrap:wrap; } }
+@media(max-width:700px) { h1 { font-size:clamp(38px,7.6vw,54px); } .hero-visual { height:auto; min-height:0; aspect-ratio:1; margin-left:var(--gutter); } .hero-visual>img { width:76%; } .collection-grid { gap:16px; } .collection-label { min-height:100px; } .brand-panel { min-height:350px; } .wedding { padding-bottom:var(--section); } }

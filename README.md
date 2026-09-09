@@ -1,31 +1,26 @@
-# Kesya Joias
+﻿# Kesya Joias
 
-Landing page em HTML, CSS e JavaScript puros, sem instalação ou etapa de build.
-
-Abra `index.html` no navegador ou use a extensão Live Server do VS Code.
-
-## Publicação
+Landing page em HTML, CSS e JavaScript, sem instalação ou etapa de build.
 
 Site: https://pedrolinard.github.io/kesya/
 
-Cada push na branch `main` executa `.github/workflows/deploy.yml` e publica o site no GitHub Pages. O workflow verifica a sintaxe do JavaScript e envia somente o HTML, CSS, JavaScript e a pasta de imagens. Para atualizações, validar a alteração, fazer commit/push e acompanhar o deploy até a conclusão.
+Abra `index.html` no navegador ou use o Live Server do VS Code.
 
-## Arquivos
+## Conteúdo
 
-- `index.html`: conteúdo, seções, contatos e metadados.
-- `styles.css`: identidade visual, animações e layouts responsivos.
-- `script.js`: menu móvel, mensagens de WhatsApp, animações de entrada e perguntas frequentes.
-- `assets/kesya-logo.jpg`: logotipo original fornecido pelo usuário.
-- `assets/joias-editorial.png`: fotografia ilustrativa gerada para este projeto com a ferramenta integrada de geração de imagens. Não representa estoque real.
+- `index.html`: informações da loja, categorias e links de atendimento.
+- `styles.css`: identidade visual e layouts responsivos.
+- `script.js`: menu, mensagens de WhatsApp, animações e perguntas frequentes.
+- `assets/kesya-logo.jpg`: logotipo original enviado pelo usuário.
 
-Os dados de contato, ouro 18k, parcelamento, cidade, envio e CNPJ vieram das referências fornecidas. WhatsApp: `558698340636`, transcrito como exibido na captura. Confirmar o recebimento neste número antes de divulgar o site. Nenhuma mensagem é enviada automaticamente. Os desenhos das categorias são ilustrações vetoriais; substitua por fotos reais das peças quando disponíveis. Sem preços, avaliações ou garantias inventados.
+Os contatos, ouro 18k, parcelamento, cidade, envio e CNPJ foram transcritos das referências fornecidas. WhatsApp: `558698340636`. Nenhuma mensagem é enviada automaticamente. Os modelos e valores são consultados no atendimento; fotos reais das peças podem ser adicionadas quando disponíveis.
 
-As fontes Cormorant Garamond e Manrope são carregadas pelo Google Fonts; fontes locais alternativas são usadas sem conexão. As imagens estão salvas no projeto.
+A página usa fontes do sistema e recursos locais. A imagem gerada da primeira versão e as ilustrações das categorias foram retiradas da publicação.
 
-## Imagem gerada
+## Validação e publicação
 
-Modo: ferramenta integrada `image_gen`, sem CLI. Arquivo final: `assets/joias-editorial.png`.
+Execute `node --check script.js` e `node scripts/check-site.cjs`. Confira também o layout e as interações em celular e desktop.
 
-Prompt final:
+Cada push na `main` executa `.github/workflows/deploy.yml`, valida os arquivos e publica HTML, CSS, JavaScript e imagens no GitHub Pages. O fluxo solicitado pelo usuário é validar, fazer commit/push e acompanhar o deploy até a conclusão, conforme `AGENTS.md`.
 
-> Use case: product-mockup. Asset: luxury Brazilian gold jewelry boutique landing page hero photograph, portrait 1024x1536. Editorial still life of a fine delicate yellow gold necklace with small round luminous pendant draped elegantly over a large sculptural warm ivory stone pedestal, with a pair of small gold hoop earrings and two simple polished gold wedding bands at its base. Beige silk fabric softly folded in foreground, warm limestone backdrop, sunlight from upper left creating beautiful architectural shadows, muted cream champagne sand palette, rich natural metal reflections. Carefully composed sophisticated high end magazine product photography, ample breathing space around jewelry, close framing, photorealistic. No text, logos, watermarks, borders or collage. Jewelry is conceptual illustration.
+Os controles e limites da revisão de segurança estão em `SECURITY-REVIEW.md`.
