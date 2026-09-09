@@ -4,6 +4,12 @@ Landing page em HTML, CSS e JavaScript puros, sem instalação ou etapa de build
 
 Abra `index.html` no navegador ou use a extensão Live Server do VS Code.
 
+## Publicação
+
+Site: https://pedrolinard.github.io/kesya/
+
+Cada push na branch `main` executa `.github/workflows/deploy.yml` e publica o site no GitHub Pages. O workflow verifica a sintaxe do JavaScript e envia somente o HTML, CSS, JavaScript e a pasta de imagens. Para atualizações, validar a alteração, fazer commit/push e acompanhar o deploy até a conclusão.
+
 ## Arquivos
 
 - `index.html`: conteúdo, seções, contatos e metadados.
