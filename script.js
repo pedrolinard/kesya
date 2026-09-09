@@ -59,3 +59,20 @@ questions.forEach(question => {
     });
   });
 });
+
+// Indica a seção atual no menu, inclusive depois de rolar a página.
+if ('IntersectionObserver' in window) {
+  const links = [...navigation.querySelectorAll('a[href^="#"]')];
+  const sectionObserver = new IntersectionObserver(entries => {
+    const current = entries.find(entry => entry.isIntersecting);
+    if (!current) return;
+    links.forEach(link => {
+      if (link.hash === `#${current.target.id}`) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }, { rootMargin: '-15% 0px -65% 0px', threshold: 0 });
+  document.querySelectorAll('main section[id]').forEach(section => sectionObserver.observe(section));
+}

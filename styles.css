@@ -1344,3 +1344,477 @@ h1 { font-size:clamp(42px,4.5vw,72px); line-height:1.12; }
 .contact h2 { font-size:clamp(36px,4.6vw,64px); }
 @media(max-width:900px) { .collection-grid { gap:16px; } .collection-card { padding-inline:18px; } .collection-label { gap:12px; flex-wrap:wrap; } }
 @media(max-width:700px) { h1 { font-size:clamp(38px,7.6vw,54px); } .hero-visual { height:auto; min-height:0; aspect-ratio:1; margin-left:var(--gutter); } .hero-visual>img { width:76%; } .collection-grid { gap:16px; } .collection-label { min-height:100px; } .brand-panel { min-height:350px; } .wedding { padding-bottom:var(--section); } }
+
+/* Navegação: respostas curtas ao toque, sem movimentos contínuos. */
+.contact-label {
+  display: none;
+}
+
+.button:active,
+.collection-card:active,
+.floating-contact:active {
+  transform: scale(.98);
+}
+
+.header nav a[aria-current="location"] {
+  color: var(--gold);
+}
+
+.header nav a[aria-current="location"]:after {
+  width: 100%;
+}
+
+@keyframes answer-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+details[open] p {
+  animation: answer-in .24s ease-out;
+}
+
+/* Celular: entrada curta, categorias acessíveis e atendimento sempre à mão. */
+@media (max-width: 700px) {
+  :root {
+    --gutter: clamp(20px, 5.5vw, 32px);
+    --section: 44px;
+  }
+
+  html {
+    scroll-padding-top: 94px;
+  }
+
+  body {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom));
+    background: #fbf9f4;
+  }
+
+  .announcement {
+    font-size: 9px;
+    line-height: 1.5;
+    letter-spacing: .7px;
+    padding: 8px 12px;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    min-height: 74px;
+    gap: 12px;
+    background: #fbf9f4;
+    border-bottom-color: #e8e3d8;
+    box-shadow: 0 3px 14px #30372e05;
+  }
+
+  .brand {
+    width: 88px;
+    height: 72px;
+  }
+
+  .brand img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .header-contact {
+    padding: 10px 0;
+    border: 0;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .menu-toggle {
+    border-radius: 50%;
+    background: #eeebe2;
+    border: 0;
+    width: 44px;
+  }
+
+  .header nav {
+    padding: 8px var(--gutter) 20px;
+    background: #fbf9f4;
+    border-radius: 0 0 18px 18px;
+    max-height: calc(100dvh - 164px);
+    overflow-y: auto;
+  }
+
+  .header nav a {
+    font-size: 15px;
+    padding: 14px 6px;
+  }
+
+  .header nav a[aria-current="location"] {
+    background: #eee8da;
+    border-radius: 8px;
+  }
+
+  .hero {
+    background: radial-gradient(ellipse at 100% 0, #e9dfc960, transparent 65%);
+  }
+
+  .hero-copy {
+    padding: 30px var(--gutter) 25px;
+  }
+
+  .hero .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: clamp(34px, 8.6vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -1.3px;
+    margin-bottom: 18px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 34ch;
+    margin-bottom: 0;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 23px;
+  }
+
+  .button {
+    font-size: 14px;
+    min-height: 52px;
+    border-radius: 10px;
+    padding: 14px 19px;
+  }
+
+  .hero .button {
+    width: 100%;
+    justify-content: space-between;
+    background: #846329;
+    box-shadow: 0 5px 14px #84632918;
+  }
+
+  .hero-actions .text-link {
+    justify-self: start;
+    border: 0;
+    font-size: 13px;
+    min-height: 44px;
+  }
+
+  .hero-signature {
+    padding-top: 14px;
+    margin-top: 6px;
+    border-color: #e2dccd;
+  }
+
+  .hero-signature p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .benefits {
+    background: #eeeade;
+    padding: 12px var(--gutter);
+    gap: 0 12px;
+    border: 0;
+  }
+
+  .benefits > div {
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .benefits p {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .benefits strong {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .section-heading {
+    margin-bottom: 24px;
+    gap: 13px;
+  }
+
+  .eyebrow {
+    margin-bottom: 12px;
+    font-size: 10px;
+    letter-spacing: 1.4px;
+  }
+
+  h2,
+  .essence-copy h2,
+  .wedding h2,
+  .faq h2,
+  .contact h2 {
+    font-size: clamp(30px, 7.5vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -.8px;
+    text-wrap: pretty;
+  }
+
+  .section-heading > p {
+    line-height: 1.7;
+    max-width: 34ch;
+  }
+
+  .collection-grid {
+    gap: 12px;
+    counter-reset: category;
+  }
+
+  .collection-card {
+    counter-increment: category;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 19px 16px;
+    background: #fffefa;
+    border: 1px solid #e2dbcb;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px #39332003;
+    transition: transform .18s ease, background-color .18s ease;
+  }
+
+  .collection-card:before {
+    content: counter(category, decimal-leading-zero);
+    align-self: flex-start;
+    padding-top: 4px;
+    color: #9b8358;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .collection-card:active {
+    background: #eee8da;
+  }
+
+  .collection-label {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .collection-label h3 {
+    font-size: 27px;
+    margin-bottom: 5px;
+  }
+
+  .collection-label p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .collection-label > span {
+    width: 38px;
+    height: 38px;
+    border: 0;
+    background: #f0eadc;
+    color: #715321;
+  }
+
+  .collection-note {
+    margin-top: 22px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .essence {
+    gap: 32px;
+    padding-top: 32px;
+    background: #f0eee6;
+  }
+
+  .brand-panel {
+    min-height: 0;
+    padding: 23px;
+    border-radius: 14px;
+    background: #e6e2d5;
+    border: 0;
+    display: block;
+  }
+
+  .brand-panel h3 {
+    font-size: 32px;
+    margin: 0 0 13px;
+  }
+
+  .brand-panel h3 br {
+    display: none;
+  }
+
+  .brand-panel > p:not(.eyebrow) {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 10px;
+  }
+
+  .brand-panel > p br {
+    display: none;
+  }
+
+  .essence-copy > p:not(.eyebrow) {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .essence-copy .text-link {
+    margin-top: 0;
+    font-size: 13px;
+  }
+
+  .wedding {
+    margin: 26px var(--gutter) 0;
+    border-radius: 18px;
+    padding: 30px 23px;
+  }
+
+  .wedding .eyebrow {
+    font-size: 9px;
+  }
+
+  .wedding h2 br {
+    display: none;
+  }
+
+  .wedding p:not(.eyebrow) {
+    line-height: 1.75;
+    margin-bottom: 23px;
+  }
+
+  .wedding .button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .faq {
+    gap: 16px;
+    background: #fbf9f4;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .faq-list details,
+  .faq-list details:first-child {
+    border: 1px solid #e3ddd0;
+    border-radius: 10px;
+    background: #fffefa;
+  }
+
+  .faq-list details[open] {
+    background: #f0eadc;
+    border-color: #c9b993;
+  }
+
+  summary {
+    padding: 16px;
+    font-size: 14px;
+    gap: 16px;
+  }
+
+  details p {
+    padding: 0 16px 18px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .contact {
+    text-align: left;
+    padding-top: 34px;
+    background: #eee7d7;
+  }
+
+  .contact > p:not(.eyebrow) {
+    margin: 0 0 22px;
+  }
+
+  .contact .button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .contact-location {
+    font-size: 9px;
+    letter-spacing: .7px;
+    margin-top: 20px;
+  }
+
+  footer {
+    padding-top: 30px;
+    padding-bottom: 28px;
+  }
+
+  .footer-top {
+    gap: 16px;
+    padding-bottom: 23px;
+  }
+
+  .footer-bottom {
+    padding-right: 0;
+  }
+
+  .floating-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: auto;
+    height: 54px;
+    left: var(--gutter);
+    right: var(--gutter);
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    border-radius: 14px;
+    border-color: #59654f;
+    background: #303c32;
+    box-shadow: 0 5px 22px #27311e30, 0 0 0 5px #fbf9f4;
+  }
+
+  .contact-label {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .reveal {
+    transition-duration: .35s;
+  }
+
+  .reveal.is-pending {
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 360px) {
+  .header-contact { font-size: 11px; }
+  .header { gap: 8px; }
+  h1 { font-size: 32px; }
+  .collection-card { padding: 17px 14px; gap: 10px; }
+  .collection-label h3 { font-size: 25px; }
+  .wedding { padding-inline: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal.is-pending { transform: none; }
+  .button:active, .collection-card:active, .floating-contact:active { transform: none; }
+}
