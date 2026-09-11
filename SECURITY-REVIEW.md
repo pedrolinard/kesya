@@ -29,6 +29,8 @@ Escopo: arquivos atuais da landing page, workflow de publicação, histórico do
 - Varredura de segredos e proteção contra envio de segredos ativas no repositório; nenhum alerta aberto.
 - Histórico do Git revisado: nenhuma credencial, chave, token ou documento comercial encontrado. A pasta `documentos/` é ignorada pelo Git.
 - Permissão padrão dos workflows somente leitura e sem aprovação de pull requests por workflows.
+- Regra "Proteger main" (ruleset do GitHub) ativa na branch padrão: bloqueia force push e exclusão da `main`. Pushes normais continuam permitidos.
+- Novos commits deste repositório usam o e-mail `noreply` do GitHub (configuração local do Git), sem expor e-mail pessoal.
 
 ## Limites
 
@@ -36,9 +38,7 @@ A CSP enviada por meta não aceita `frame-ancestors`, e o GitHub Pages não perm
 
 O endereço `pedrolinard.github.io` é compartilhado por todos os sites do GitHub Pages dessa conta. Hoje só este projeto usa o endereço. Se outro repositório da conta publicar um site, os dois terão a mesma origem para o navegador, e `script-src 'self'` passaria a aceitar scripts do outro site. Um domínio próprio elimina esse compartilhamento.
 
-Os commits do repositório público exibem o e-mail do autor. Para não expor um e-mail pessoal em commits futuros, pode-se usar o endereço `noreply` do GitHub.
-
-A branch `main` não tem regra de proteção contra force push ou exclusão.
+Os commits feitos até 11/09/2026 exibem o e-mail pessoal do autor. Reescrever o histórico para removê-lo exigiria force push, agora bloqueado, e não compensa; os commits seguintes usam o endereço `noreply`. Em outro computador ou clone, é preciso repetir a configuração local do e-mail.
 
 As verificações não garantem ausência de vulnerabilidades. Recursos futuros como formulários, carrinho, login ou integrações precisam de nova revisão. As versões das actions devem ser revisadas periodicamente.
 
