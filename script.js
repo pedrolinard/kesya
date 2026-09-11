@@ -6,6 +6,17 @@ const menuClose = navigation.querySelector('.menu-close');
 const menuBackdrop = document.querySelector('.menu-backdrop');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+// Tela de carregamento: sai assim que a página termina de carregar.
+// O CSS também a esconde sozinho, então ela nunca trava o site.
+const loader = document.querySelector('.loader');
+if (loader) {
+  const started = performance.now();
+  const hide = () => loader.classList.add('is-done');
+  const finish = () => setTimeout(hide, Math.max(0, 700 - (performance.now() - started)));
+  if (document.readyState === 'complete') finish();
+  else window.addEventListener('load', finish, { once: true });
+}
+
 // Menu lateral no celular.
 function setMenu(open) {
   menuButton.setAttribute('aria-expanded', String(open));

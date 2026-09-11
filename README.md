@@ -10,9 +10,9 @@ Para ver localmente, abra `index.html` no navegador ou use o Live Server do VS C
 
 ### Site publicado
 
-- `index.html`: página única com as seções Início (saudação e conversa de exemplo), benefícios, Joias, Ajuda na escolha, Como funciona, Sobre a Kesya, Alianças, Dúvidas e Contato. No cabeçalho estão a CSP, as tags de compartilhamento (Open Graph), os dados estruturados para buscadores, o link canônico e os ícones.
+- `index.html`: página única com as seções Início (saudação e conversa de exemplo), benefícios, Joias, Ajuda na escolha, Como funciona, Sobre a Kesya, Alianças, Dúvidas e Contato. No cabeçalho estão a CSP, as tags de compartilhamento (Open Graph), os dados estruturados para buscadores, o link canônico e os ícones. A página abre com uma tela de carregamento com a marca, que some sozinha por CSS mesmo sem JavaScript.
 - `styles.css`: identidade visual, ilustrações das categorias feitas em CSS, animações e layouts responsivos.
-- `script.js`: menu lateral no celular, destaque da seção atual no menu, saudação conforme o horário, mensagens de WhatsApp, ajuda na escolha, aparição dos blocos ao rolar, perguntas frequentes e convite de contato.
+- `script.js`: saída da tela de carregamento, menu lateral no celular, destaque da seção atual no menu, saudação conforme o horário, mensagens de WhatsApp, ajuda na escolha, aparição dos blocos ao rolar, perguntas frequentes e convite de contato.
 - `404.html`: página exibida quando um endereço do site não existe. Não tem JavaScript e seu estilo interno é liberado na CSP por hash.
 - `sitemap.xml`: endereço do site para enviar ao Google Search Console.
 - `assets/kesya-logo.jpg`: logotipo original enviado pelo usuário, usado também nos dados estruturados.
