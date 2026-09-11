@@ -24,7 +24,7 @@ As imagens `.webp`, os ícones e `assets/compartilhar.jpg` foram gerados a parti
 
 ### Apoio
 
-- `scripts/check-site.cjs`: verificação automática rodada a cada deploy. Confere a CSP das duas páginas, a ausência de scripts inline (exceto os dados estruturados), os links externos, a imagem de prévia, o hash do estilo da 404 e o sitemap.
+- `scripts/check-site.cjs`: verificação automática rodada a cada deploy. Confere a CSP das duas páginas, a ausência de scripts inline (exceto os dados estruturados), de elementos incorporados e de redirecionamentos, os links externos, a imagem de prévia, o hash do estilo da 404, o sitemap e se as ações do deploy estão fixadas por commit.
 - `.github/workflows/deploy.yml`: valida e publica o site no GitHub Pages a cada push na `main`.
 - `AGENTS.md`: fluxo de atualização combinado com o usuário.
 - `SECURITY-REVIEW.md`: controles de segurança aplicados e seus limites.

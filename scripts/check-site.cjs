@@ -16,6 +16,8 @@ function checkPolicy(page, name) {
   }
   assert.ok(!/unsafe-inline|unsafe-eval/.test(policy[1]), `CSP de ${name} permite execução insegura`);
   assert.ok(!/\son[a-z]+\s*=|\sstyle\s*=/i.test(page), `Código inline encontrado em ${name}`);
+  assert.ok(!/<(?:iframe|frame|object|embed|form|base)\b/i.test(page), `Elemento incorporado, formulário ou base encontrado em ${name}`);
+  assert.ok(!/http-equiv="refresh"/i.test(page), `Redirecionamento automático encontrado em ${name}`);
   return policy[1];
 }
 
@@ -70,4 +72,10 @@ assert.ok(notFoundPolicy.includes(`style-src 'sha256-${hash}'`), 'Hash do estilo
 checkLinks(notFound, '404.html');
 
 assert.ok(fs.readFileSync('sitemap.xml', 'utf8').includes(`<loc>${SITE}</loc>`), 'Sitemap sem o endereço do site');
-console.log('OK: recursos locais, política CSP, links HTTPS, dados estruturados, página 404 e sitemap.');
+
+// Deploy: toda ação externa precisa estar fixada em um commit completo.
+const workflow = fs.readFileSync('.github/workflows/deploy.yml', 'utf8');
+for (const use of workflow.matchAll(/uses:\s*(\S+)/g)) {
+  assert.ok(/@[0-9a-f]{40}$/.test(use[1]), `Ação sem fixação por commit: ${use[1]}`);
+}
+console.log('OK: recursos locais, política CSP, links HTTPS, dados estruturados, página 404, sitemap e ações do deploy fixadas.');
