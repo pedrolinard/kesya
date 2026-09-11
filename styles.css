@@ -1,5 +1,6 @@
 /* Kesya Joias — vitrine acolhedora, escolha guiada e atendimento. */
 :root {
+  color-scheme: light;
   --ivory: #fbf8f2;
   --champagne: #f4ecdc;
   --gold: #8a6126;
@@ -178,7 +179,7 @@ h1 em { white-space: nowrap; }
 .chip:active span { scale: .97; }
 .name-field label { display: block; margin-bottom: 10px; font-weight: 700; }
 .name-field small { font-size: 13px; font-weight: 400; color: var(--muted); }
-.name-field input { width: 100%; min-height: 50px; padding: 12px 18px; border: 1px solid #ddd0b8; border-radius: 14px; background: #fdfbf7; font: inherit; color: var(--ink); transition: border-color .25s, background-color .25s; }
+.name-field input { width: 100%; min-height: 50px; padding: 12px 18px; border: 1px solid #ddd0b8; border-radius: 14px; background: #fdfbf7; font: inherit; font-size: 16px; color: var(--ink); transition: border-color .25s, background-color .25s; }
 .name-field input:focus { border-color: var(--gold); background: #fff; }
 .name-field input::placeholder { color: #8b857b; }
 .message-preview { margin: 28px 0 22px; padding: 18px 20px 22px; border-radius: 20px; background: linear-gradient(#f8f1e3, #f2e6d0); }
@@ -281,6 +282,7 @@ details[open] p { animation: fade-up .4s var(--ease); }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 @keyframes twinkle { 0%, 100% { opacity: 1; transform: scale(1) rotate(0); } 50% { opacity: .55; transform: scale(.8) rotate(45deg); } }
 @keyframes spin { to { rotate: 360deg; } }
+@keyframes fade { from { opacity: 0; } }
 @keyframes fade-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 @keyframes pop { 0% { transform: scale(.97); } 60% { transform: scale(1.015); } 100% { transform: scale(1); } }
 @keyframes swing { 0%, 100% { rotate: 0deg; } 25% { rotate: 9deg; } 75% { rotate: -9deg; } }
@@ -326,15 +328,15 @@ details[open] p { animation: fade-up .4s var(--ease); }
   .brand img { width: 92px; height: 92px; }
   .menu-toggle { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; width: 46px; height: 46px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 50%; background: #fff; }
   .menu-toggle span { width: 18px; height: 2px; border-radius: 2px; background: var(--ink); }
-  .menu-backdrop:not([hidden]) { display: block; position: fixed; inset: 0; z-index: 21; background: #2f261c66; animation: fade-up .3s ease; }
-  .header nav { position: fixed; top: 0; right: 0; bottom: 0; z-index: 22; width: min(340px, 88vw); flex-direction: column; align-items: stretch; gap: 0; padding: 18px 24px calc(24px + env(safe-area-inset-bottom)); overflow-y: auto; background: var(--ivory); box-shadow: -20px 0 50px -20px #2f261c55; visibility: hidden; transform: translateX(100%); transition: transform .4s var(--ease), visibility .4s; }
+  .menu-backdrop:not([hidden]) { display: block; position: fixed; inset: 0; z-index: 21; background: #2f261c66; animation: fade .3s ease; }
+  .header nav { position: fixed; top: 0; right: 0; bottom: 0; z-index: 22; width: min(340px, 88vw); flex-direction: column; align-items: stretch; gap: 0; padding: 18px 24px calc(24px + env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; background: var(--ivory); box-shadow: -20px 0 50px -20px #2f261c55; visibility: hidden; transform: translateX(100%); transition: transform .4s var(--ease), visibility .4s; }
   .header nav.is-open { visibility: visible; transform: none; }
   .menu-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
   .menu-heading > span { font: 24px var(--serif); color: var(--gold-deep); }
   .menu-close { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--champagne); font-size: 26px; line-height: 1; color: var(--gold-deep); }
   .header nav > a { padding: 15px 4px; border-bottom: 1px solid var(--line); font-size: 18px; color: var(--ink); }
   .header nav > a:after { display: none; }
-  .header nav > .menu-contact { display: inline-flex; margin-top: 24px; padding: 14px 22px; border: 0; font-size: 15px; color: #fff; }
+  .header nav > .menu-contact, .header nav > .menu-contact:hover { display: inline-flex; margin-top: 24px; padding: 14px 22px; border: 0; font-size: 15px; color: #fff; }
   .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 44px; }
   .hero:before { top: 72%; right: -40%; }
   .hero:after { top: 72%; right: -20%; }
@@ -395,6 +397,7 @@ details[open] p { animation: fade-up .4s var(--ease); }
   .contact-actions .button { width: 100%; }
   .footer { padding-bottom: 96px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .footer-col a { min-height: 44px; min-width: 44px; }
   .footer-brand { grid-column: 1 / -1; }
   .floating-contact { width: 58px; height: 58px; min-height: 0; padding: 0; justify-content: center; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); }
   .floating-contact svg { width: 26px; height: 26px; }

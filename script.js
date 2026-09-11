@@ -24,7 +24,10 @@ menuClose.addEventListener('click', () => {
   setMenu(false);
   menuButton.focus();
 });
-menuBackdrop.addEventListener('click', () => setMenu(false));
+menuBackdrop.addEventListener('click', () => {
+  setMenu(false);
+  menuButton.focus();
+});
 navigation.addEventListener('click', event => {
   if (event.target.closest('a')) setMenu(false);
 });
@@ -47,8 +50,9 @@ document.addEventListener('keydown', event => {
     }
   }
 });
-window.matchMedia('(min-width: 981px)').addEventListener('change', event => {
-  if (event.matches) setMenu(false);
+// Usa a mesma condição do CSS para não deixar o menu aberto fora do celular.
+window.matchMedia('(max-width: 980px)').addEventListener('change', event => {
+  if (!event.matches) setMenu(false);
 });
 
 const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
@@ -109,6 +113,8 @@ if (chooser) {
     if (event.target.type === 'radio') updateMessage(true);
   });
   nameInput.addEventListener('input', () => updateMessage(false));
+  // O navegador pode restaurar as respostas ao voltar para a página.
+  window.addEventListener('pageshow', () => updateMessage(false));
   updateMessage(false);
 }
 
@@ -167,6 +173,8 @@ if (hint && hero && 'IntersectionObserver' in window) {
   };
   hint.querySelector('.float-hint-close').addEventListener('click', closeHint);
   document.querySelector('.floating-contact').addEventListener('click', closeHint);
+  // Quem já começou a escolha guiada não precisa ser interrompido.
+  document.querySelector('.chooser-card')?.addEventListener('focusin', closeHint);
   new IntersectionObserver(([entry]) => {
     clearTimeout(hintTimer);
     if (entry.isIntersecting) {
@@ -179,5 +187,5 @@ if (hint && hero && 'IntersectionObserver' in window) {
     } else if (hintState === 'shown') {
       hint.hidden = false;
     }
-  }, { threshold: 0.2 }).observe(hero);
+  }, { threshold: 0 }).observe(hero);
 }
