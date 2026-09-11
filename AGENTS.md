@@ -10,4 +10,4 @@ O usuário autorizou e solicitou este fluxo para todas as atualizações deste p
 
 Publicação: https://pedrolinard.github.io/kesya/
 Workflow: `.github/workflows/deploy.yml`.
-Publicar apenas `index.html`, `styles.css`, `script.js` e `assets/`; não incluir `.preview/`, documentação interna ou credenciais no artefato do site.
+Publicar apenas `index.html`, `404.html`, `sitemap.xml`, `styles.css`, `script.js` e `assets/`; não incluir `.preview/`, documentação interna ou credenciais no artefato do site.

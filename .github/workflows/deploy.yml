@@ -34,7 +34,7 @@ jobs:
           node --check script.js
           node scripts/check-site.cjs
           mkdir -p _site
-          cp index.html styles.css script.js _site/
+          cp index.html 404.html sitemap.xml styles.css script.js _site/
           cp -R assets _site/assets
       - name: Upload site
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3

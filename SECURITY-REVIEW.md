@@ -6,6 +6,8 @@ Escopo: arquivos atuais da landing page e workflow de publicação. Revisão de 
 
 - CSP no início do HTML: recursos locais, sem scripts inline/eval, conexões JavaScript, objetos incorporados ou envio de formulários; alteração da URL base bloqueada.
 - Fontes do sistema. A página não precisa carregar scripts, imagens ou fontes de terceiros.
+- O único bloco inline da página principal são os dados estruturados (`application/ld+json`), que o navegador não executa. A verificação do deploy rejeita qualquer outro script inline e confere se o JSON é válido.
+- A página 404 não tem JavaScript. Seu estilo interno é liberado na CSP apenas pelo hash SHA-256 do conteúdo, e a verificação falha se o hash ficar desatualizado.
 - Links externos em HTTPS com `noopener noreferrer`; política de referência `no-referrer`.
 - Mensagens de WhatsApp codificadas com `encodeURIComponent` e destino fixo. Nenhuma mensagem é enviada automaticamente.
 - Sem formulários enviados, login, pagamentos, banco de dados, cookies, analytics ou armazenamento local no código atual. O atendimento acontece nos serviços externos após o clique.
