@@ -20,7 +20,7 @@ Para ver localmente, abra `index.html` no navegador ou use o Live Server do VS C
 - `assets/icone.png` e `assets/apple-touch-icon.png`: ícones da aba do navegador e da tela inicial do celular.
 - `assets/compartilhar.jpg`: imagem de prévia (1200x630) exibida ao compartilhar o link no WhatsApp e redes sociais.
 
-As imagens `.webp`, os ícones e `compartilhar.jpg` foram gerados a partir de `kesya-logo.jpg`. Ao substituir a imagem de prévia, mantenha 1200x630 e menos de 300 KB, tamanho recomendado para a prévia aparecer no WhatsApp.
+As imagens `.webp`, os ícones e `assets/compartilhar.jpg` foram gerados a partir de `assets/kesya-logo.jpg`. Ao substituir a imagem de prévia, mantenha 1200x630 e menos de 300 KB, tamanho recomendado para a prévia aparecer no WhatsApp.
 
 ### Apoio
 
