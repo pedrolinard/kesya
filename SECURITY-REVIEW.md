@@ -1,4 +1,4 @@
-# Revisão de segurança — 09/09/2026
+# Revisão de segurança (09/09/2026)
 
 Escopo: arquivos atuais da landing page e workflow de publicação. Revisão de código e verificações no navegador; não é um pentest da infraestrutura do GitHub, Instagram ou WhatsApp.
 
@@ -20,4 +20,4 @@ A CSP enviada por meta não aceita `frame-ancestors`. Portanto, não há proteç
 
 As verificações não garantem ausência de vulnerabilidades. Recursos futuros como formulários, carrinho, login ou integrações precisam de nova revisão. Os pins das actions devem ser revisados quando houver atualizações.
 
-Referências: [MDN — CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP), [MDN — frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors), [GitHub — uso seguro de Actions](https://docs.github.com/en/actions/reference/security/secure-use).
+Referências: [MDN: CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP), [MDN: frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors), [GitHub: uso seguro de Actions](https://docs.github.com/en/actions/reference/security/secure-use).

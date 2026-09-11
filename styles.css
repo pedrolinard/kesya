@@ -1,4 +1,4 @@
-/* Kesya Joias — vitrine acolhedora, escolha guiada e atendimento. */
+/* Kesya Joias: vitrine acolhedora, escolha guiada e atendimento. */
 :root {
   color-scheme: light;
   --ivory: #fbf8f2;
@@ -42,8 +42,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 .skip-link { position: fixed; top: -100px; left: 20px; padding: 12px 20px; background: #fff; color: var(--ink); z-index: 30; border-radius: 12px; }
 .skip-link:focus { top: 10px; }
 .section-space { padding: var(--section) var(--wrap); }
-.eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px; color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
-.eyebrow:before { content: ""; width: 22px; height: 1px; background: currentColor; }
+.eyebrow { display: inline-block; margin-bottom: 16px; color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
 
 /* Anel dourado reutilizado nas ilustrações. */
 .ring { display: block; border-radius: 50%; background: conic-gradient(from 210deg, #f7e3ad, #c08e3a 25%, #f3d28a 45%, #9c6d25 70%, #f7e3ad); -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - var(--thick, 8px)), #000 calc(100% - var(--thick, 8px) + 1px)); mask: radial-gradient(farthest-side, #0000 calc(100% - var(--thick, 8px)), #000 calc(100% - var(--thick, 8px) + 1px)); }
@@ -118,7 +117,6 @@ h1 em { white-space: nowrap; }
 
 /* Categorias. */
 .section-heading { max-width: 660px; margin: 0 auto 48px; text-align: center; }
-.section-heading .eyebrow:after { content: ""; width: 22px; height: 1px; background: currentColor; }
 .section-heading > p:last-child { margin: 0; font-size: 17px; color: var(--muted); }
 .swipe-hint { display: none; }
 .collection-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
@@ -208,7 +206,6 @@ h1 em { white-space: nowrap; }
 .note-card blockquote { margin: 0 0 16px; }
 .note-card blockquote p { margin: 0; font: italic clamp(21px, 2.1vw, 27px)/1.45 var(--serif); color: #3b2d17; }
 .note-sign { margin-bottom: 26px; font-size: 14px; font-weight: 700; color: var(--gold-deep); }
-.note-sign:before { content: "— "; }
 .visit { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding-top: 22px; border-top: 1px solid #d8c49b; }
 .visit svg { width: 42px; height: 42px; padding: 9px; border-radius: 50%; background: #fff; color: var(--gold); }
 .visit div { flex: 1 1 180px; }
