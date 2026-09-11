@@ -5,3 +5,6 @@ node_modules/
 !.env.example
 Thumbs.db
 .DS_Store
+
+# Propostas, contratos e outros documentos comerciais: não versionar (repositório público).
+documentos/
