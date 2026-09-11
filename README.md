@@ -8,9 +8,9 @@ Abra `index.html` no navegador ou use o Live Server do VS Code.
 
 ## Conteúdo
 
-- `index.html`: informações da loja, categorias e links de atendimento.
-- `styles.css`: identidade visual e layouts responsivos.
-- `script.js`: menu, mensagens de WhatsApp, animações e perguntas frequentes.
+- `index.html`: informações da loja, conversa de exemplo, categorias, escolha guiada, passos do atendimento e links de contato.
+- `styles.css`: identidade visual, ilustrações em CSS, animações e layouts responsivos.
+- `script.js`: menu, saudação por horário, mensagens de WhatsApp, escolha guiada, animações, perguntas frequentes e convite de contato.
 - `assets/kesya-logo.jpg`: logotipo original enviado pelo usuário.
 
 Os contatos, ouro 18k, parcelamento, cidade, envio e CNPJ foram transcritos das referências fornecidas. WhatsApp: `558698340636`. Nenhuma mensagem é enviada automaticamente. Os modelos e valores são consultados no atendimento; fotos reais das peças podem ser adicionadas quando disponíveis.

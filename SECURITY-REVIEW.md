@@ -8,7 +8,8 @@ Escopo: arquivos atuais da landing page e workflow de publicação. Revisão de 
 - Fontes do sistema. A página não precisa carregar scripts, imagens ou fontes de terceiros.
 - Links externos em HTTPS com `noopener noreferrer`; política de referência `no-referrer`.
 - Mensagens de WhatsApp codificadas com `encodeURIComponent` e destino fixo. Nenhuma mensagem é enviada automaticamente.
-- Sem formulários, login, pagamentos, banco de dados, cookies, analytics ou armazenamento local no código atual. O atendimento acontece nos serviços externos após o clique.
+- Sem formulários enviados, login, pagamentos, banco de dados, cookies, analytics ou armazenamento local no código atual. O atendimento acontece nos serviços externos após o clique.
+- A escolha guiada usa opções e um campo de nome opcional apenas no navegador: o texto é limitado a 40 caracteres, exibido com `textContent` e incluído no link do WhatsApp com `encodeURIComponent`. Nada é guardado ou enviado sem o clique do cliente.
 - Actions fixadas nos commits oficiais consultados; permissões restritas ao job de publicação, credencial do checkout não persistida e tempo de execução limitado.
 - Artefato de publicação contém somente HTML, CSS, JavaScript e imagens públicas. Documentação, verificações e arquivos de prévia não são publicados.
 - `scripts/check-site.cjs` verifica os controles estáticos principais em cada deploy.

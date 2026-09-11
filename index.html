@@ -5,8 +5,8 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f6f1">
-  <meta name="description" content="Kesya Joias: joias em ouro 18k em Teresina, Piauí. Enviamos para todo o Brasil. Conheça nossas joias e fale com a gente.">
+  <meta name="theme-color" content="#fbf8f2">
+  <meta name="description" content="Kesya Joias: joias em ouro 18k em Teresina, Piauí. Enviamos para todo o Brasil. Conte o que você procura e escolha com a gente pelo WhatsApp.">
   <title>Kesya Joias | Ouro 18k em Teresina</title>
   <link rel="icon" href="assets/kesya-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
@@ -14,48 +14,234 @@
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <div class="announcement">OURO 18K <span>·</span> DE TERESINA PARA TODO O BRASIL</div>
+
   <header class="header">
     <a class="brand" href="#inicio" aria-label="Kesya Joias — início"><img src="assets/kesya-logo.jpg" alt="Kesya Joias" width="1080" height="1080"></a>
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
     <nav id="navigation" aria-label="Navegação principal">
-      <a href="#joias">Nossas joias</a><a href="#essencia">Sobre a Kesya</a><a href="#aliancas">Alianças</a><a href="#contato">Contato</a>
+      <div class="menu-heading"><span>Kesya Joias</span><button class="menu-close" type="button" aria-label="Fechar menu">×</button></div>
+      <a href="#joias">Joias</a>
+      <a href="#escolher">Ajuda na escolha</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#aliancas">Alianças</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="menu-contact button button-gold" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Vim pelo site e gostaria de conhecer as joias da Kesya.">Conversar no WhatsApp <span aria-hidden="true">↗</span></a>
     </nav>
-    <a class="header-contact" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de conhecer as joias da Kesya.">Fale com a Kesya <span aria-hidden="true">↗</span></a>
+    <a class="header-contact" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de conhecer as joias da Kesya."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.7-5A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8 7.5c-2 3.5 5 9 7.5 6.5l-2-2-1.5 1c-1.5-.8-2.3-1.6-3-3l1-1.5Z"/></svg>Fale com a Kesya</a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navigation"><span></span><span></span><span></span></button>
+    <div class="menu-backdrop" hidden></div>
   </header>
+
   <main id="conteudo">
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="gold-line"></span> JOIAS EM OURO 18K</p>
-        <h1 id="hero-title">Vamos encontrar<br><em>uma joia pra você?</em></h1>
-        <p class="hero-description">Para você ou para presentear. Conte o que procura e a gente mostra as opções em ouro 18k.</p>
-        <div class="hero-actions"><a class="button button-gold" href="#joias">Ver opções de joias <span aria-hidden="true">↗</span></a><a class="text-link" href="#essencia">Conheça a Kesya <span aria-hidden="true">→</span></a></div>
-        <div class="hero-signature"><p><strong>Estamos em Teresina, PI.</strong><br>Atendimento presencial com hora marcada.</p></div>
+        <p class="greeting"><span class="sparkle" aria-hidden="true">✦</span><span><strong id="greeting">Olá!</strong> Que bom ter você por aqui.</span></p>
+        <h1 id="hero-title">Vamos encontrar <em>a joia certa</em> pra você?</h1>
+        <p class="hero-description">Para usar todo dia, presentear alguém especial ou celebrar um sim. Conte o que você procura e a gente mostra as opções em ouro 18k, sem pressa e sem compromisso.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#escolher">Me ajude a escolher <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#joias">Ver as joias <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
-      <div class="hero-visual"><img src="assets/kesya-logo.jpg" alt="Kesya Joias" width="1080" height="1080" fetchpriority="high"><div class="image-caption"><span>TERESINA, PIAUÍ</span><span>OURO 18K</span></div></div>
-      <a class="scroll-cue" href="#joias">DESCUBRA <span aria-hidden="true">↓</span></a>
+      <div class="hero-visual">
+        <div class="hero-badge badge-top" aria-hidden="true"><span class="ring"></span><p><strong>Ouro 18k</strong>Kesya Joias</p></div>
+        <figure class="chat">
+          <div class="chat-head"><img src="assets/kesya-logo.jpg" alt="" width="1080" height="1080"><div><strong>Kesya Joias</strong><span>atendimento pelo WhatsApp</span></div></div>
+          <div class="chat-body">
+            <p class="bubble bubble-client">Oi! Queria dar um presente pra minha mãe, mas não sei bem o que escolher.</p>
+            <p class="bubble bubble-kesya">Oi! Que carinho 💛 Me conta um pouco do estilo dela? A gente separa algumas opções em ouro 18k pra você ver.</p>
+            <p class="bubble bubble-client">Ela gosta de coisas delicadas. Pensei num colar.</p>
+            <p class="bubble bubble-kesya typing" aria-hidden="true"><span></span><span></span><span></span></p>
+          </div>
+          <figcaption>Exemplo de conversa com a gente</figcaption>
+        </figure>
+        <div class="hero-badge badge-bottom" aria-hidden="true"><span class="ring"></span><p><strong>Até 12x</strong>no cartão</p></div>
+      </div>
     </section>
+
     <div class="benefits" aria-label="Informações da loja">
-      <div><span aria-hidden="true">◇</span><p>Joias em <strong>ouro 18k</strong></p></div>
-      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v10H3zM14 10h4l3 4v3h-7M6 7V4h5M6 17a2 2 0 1 0 4 0m6 0a2 2 0 1 0 4 0"/></svg><p>Envio para <strong>todo o Brasil</strong></p></div>
-      <div><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg><p>Em até <strong>12x no cartão</strong></p></div>
-      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 1-8 8H4l-2 3V11a9 9 0 0 1 18 0ZM7 10h8M7 14h5"/></svg><p>Atendimento <strong>pelo WhatsApp</strong></p></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12l4 5-10 11L2 9Z"/><path d="M2 9h20M9.5 4 8 9l4 11 4-11-1.5-5"/></svg><p><strong>Ouro 18k</strong>Joias para durar</p></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v10H3zM14 10h4l3 4v3h-7M6 7V4h5M6 17a2 2 0 1 0 4 0m6 0a2 2 0 1 0 4 0"/></svg><p><strong>Todo o Brasil</strong>Enviamos para sua cidade</p></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg><p><strong>Até 12x</strong>No cartão de crédito</p></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 1-8 8H4l-2 3V11a9 9 0 0 1 18 0ZM7 10h8M7 14h5"/></svg><p><strong>Conversa de verdade</strong>Atendimento pelo WhatsApp</p></div>
     </div>
-    <section class="collections section-space" id="joias">
-      <div class="section-heading reveal"><div><p class="eyebrow">O QUE VOCÊ PROCURA?</p><h2>Conheça nossas <em>joias.</em></h2></div><p>Escolha uma categoria para consultar modelos e valores pelo WhatsApp.</p></div>
-      <div class="collection-grid">
-        <a class="collection-card reveal" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de conhecer os colares em ouro 18k disponíveis."><div class="collection-label"><div><h3>Colares</h3><p>Ver modelos e comprimentos</p></div><span aria-hidden="true">↗</span></div></a>
-        <a class="collection-card reveal" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de conhecer os brincos em ouro 18k disponíveis."><div class="collection-label"><div><h3>Brincos</h3><p>Consultar opções disponíveis</p></div><span aria-hidden="true">↗</span></div></a>
-        <a class="collection-card reveal" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de conhecer as alianças em ouro 18k disponíveis."><div class="collection-label"><div><h3>Alianças</h3><p>Ver modelos e tirar dúvidas</p></div><span aria-hidden="true">↗</span></div></a>
+
+    <section class="collections section-space" id="joias" aria-labelledby="joias-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Nossas joias</p>
+        <h2 id="joias-title">Escolha por onde <em>começar</em></h2>
+        <p>Toque na categoria que combina com você e fale direto com a gente. Mostramos os modelos disponíveis, medidas e valores.</p>
       </div>
-      <p class="collection-note">Prefere dar uma olhada primeiro? Veja as peças no <a href="https://www.instagram.com/kesyajoias/" target="_blank" rel="noopener noreferrer">Instagram @kesyajoias ↗</a>.</p>
+      <p class="swipe-hint" aria-hidden="true">Arraste para o lado <span>→</span></p>
+      <div class="collection-grid">
+        <article class="collection-card reveal">
+          <div class="category-cover cover-colares" aria-hidden="true"><span class="art-necklace"><span class="pendant"></span></span><p>Perto do coração.</p></div>
+          <div class="collection-label">
+            <h3>Colares</h3>
+            <p>Delicados para o dia a dia ou marcantes para uma ocasião especial. Consulte modelos e comprimentos.</p>
+            <ul class="tags" aria-label="Combina com"><li>Uso diário</li><li>Presente</li></ul>
+            <a class="button button-outline" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de ver os colares em ouro 18k da Kesya.">Quero ver colares <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="collection-card reveal">
+          <div class="category-cover cover-brincos" aria-hidden="true"><span class="art-earrings"><span class="hoop"><span class="ring"></span></span><span class="hoop"><span class="ring"></span></span></span><p>Seu toque final.</p></div>
+          <div class="collection-label">
+            <h3>Brincos</h3>
+            <p>Conte o estilo que você gosta, discreto ou chamativo, e a gente mostra as opções da loja.</p>
+            <ul class="tags" aria-label="Combina com"><li>Para você</li><li>Aniversário</li></ul>
+            <a class="button button-outline" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de ver os brincos em ouro 18k da Kesya.">Quero ver brincos <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="collection-card reveal">
+          <div class="category-cover cover-aliancas" aria-hidden="true"><span class="art-rings"><span class="ring"></span><span class="ring"></span></span><p>Uma escolha a dois.</p></div>
+          <div class="collection-label">
+            <h3>Alianças</h3>
+            <p>Para namoro, noivado ou casamento. Converse com a gente sobre modelos, medidas e valores.</p>
+            <ul class="tags" aria-label="Combina com"><li>Noivado</li><li>Casamento</li></ul>
+            <a class="button button-outline" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaríamos de conhecer as alianças em ouro 18k da Kesya.">Quero ver alianças <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+      <p class="collection-note">Quer espiar antes? Veja as peças no nosso <a href="https://www.instagram.com/kesyajoias/" target="_blank" rel="noopener noreferrer">Instagram @kesyajoias ↗</a></p>
     </section>
-    <section class="essence section-space" id="essencia"><div class="brand-panel reveal"><p class="eyebrow">VENHA CONHECER A KESYA</p><h3>Teresina,<br><em>Piauí.</em></h3><p>Combine sua visita pelo WhatsApp.<br>A gente envia o endereço e acerta o horário com você.</p><a class="text-link" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de marcar uma visita à Kesya Joias.">Marcar uma visita <span aria-hidden="true">↗</span></a></div><div class="essence-copy reveal"><p class="eyebrow">SOBRE A LOJA</p><h2>Pode chamar.<br><em>A gente ajuda.</em></h2><p>Somos de Teresina e trabalhamos com joias em ouro 18k. Você pode conversar com a gente pelo WhatsApp, marcar uma visita ou pedir o envio para sua cidade.</p><p>Se estiver em dúvida, conte o que tem em mente: o tipo de peça, a ocasião e quanto pretende investir. A gente consulta as opções e explica os detalhes antes de você decidir.</p><a class="text-link" href="https://www.instagram.com/kesyajoias/" target="_blank" rel="noopener noreferrer">Acompanhe a loja no Instagram <span aria-hidden="true">↗</span></a></div></section>
-    <section class="wedding section-space" id="aliancas"><div class="wedding-content reveal"><p class="eyebrow">ALIANÇAS EM OURO 18K</p><h2>Vamos escolher<br><em>as alianças de vocês?</em></h2><p>Mandem uma referência do que gostam. Podemos conversar sobre os modelos disponíveis, medidas e valores.</p><a class="button button-light" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Queremos conhecer as alianças da Kesya. Pode nos ajudar a escolher?">Consultar alianças <span aria-hidden="true">↗</span></a></div></section>
-    <section class="faq section-space" id="duvidas"><div class="reveal"><p class="eyebrow">PODEMOS AJUDAR?</p><h2>Antes de <em>comprar.</em></h2><p>Reunimos aqui as dúvidas sobre pagamento, entrega e atendimento.</p></div><div class="faq-list reveal"><details><summary>As joias são em ouro 18k?<span aria-hidden="true">+</span></summary><p>A Kesya trabalha com joias em ouro 18k. Fale com nossa equipe para conhecer as características e os detalhes de cada peça disponível.</p></details><details><summary>Vocês enviam para minha cidade?<span aria-hidden="true">+</span></summary><p>Enviamos para todo o Brasil. Informe seu CEP pelo WhatsApp para consultar o valor do frete e o prazo de entrega.</p></details><details><summary>Quais são as formas de pagamento?<span aria-hidden="true">+</span></summary><p>Você pode parcelar em até 12x no cartão. Consulte com a equipe os valores e as condições de pagamento para a joia escolhida.</p></details><details><summary>Como funciona o atendimento presencial?<span aria-hidden="true">+</span></summary><p>Estamos em Teresina, Piauí, e atendemos com hora marcada. Entre em contato pelo WhatsApp para combinar seu horário e receber o endereço.</p></details></div></section>
-    <section class="contact section-space" id="contato"><p class="eyebrow reveal">FALE COM A GENTE</p><h2 class="reveal">Gostou de alguma peça?<br><em>Chame a Kesya.</em></h2><p class="reveal">Pode mandar a foto ou contar o que está procurando.</p><a class="button button-gold reveal" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de ajuda para escolher uma joia da Kesya.">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a><span class="contact-location">TERESINA, PI · ATENDIMENTO COM HORA MARCADA</span></section>
+
+    <section class="chooser section-space" id="escolher" aria-labelledby="escolher-title">
+      <div class="chooser-intro reveal">
+        <p class="eyebrow">Ajuda na escolha</p>
+        <h2 id="escolher-title">Não sabe por onde começar? <em>A gente escolhe junto.</em></h2>
+        <p>Responda três perguntinhas e montamos a mensagem pra você. É só enviar pelo WhatsApp e continuar a conversa com a gente.</p>
+        <ul class="promise">
+          <li>Leva menos de um minuto</li>
+          <li>Você revisa a mensagem antes de enviar</li>
+          <li>Sem compromisso de compra</li>
+        </ul>
+      </div>
+      <div class="chooser-card reveal" data-answered="0">
+        <div class="chooser-progress" aria-hidden="true"><span></span></div>
+        <fieldset class="choice-group">
+          <legend><span>1</span>Para quem é a joia?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="para" value="para mim"><span>Para mim</span></label>
+            <label class="chip"><input type="radio" name="para" value="para presentear alguém"><span>Para presentear</span></label>
+            <label class="chip"><input type="radio" name="para" value="para nós dois"><span>Para o casal</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="choice-group">
+          <legend><span>2</span>O que você procura?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="peca" value="um colar"><span>Colar</span></label>
+            <label class="chip"><input type="radio" name="peca" value="brincos"><span>Brincos</span></label>
+            <label class="chip"><input type="radio" name="peca" value="alianças"><span>Alianças</span></label>
+            <label class="chip"><input type="radio" name="peca" value="indefinido"><span>Ainda não sei</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="choice-group">
+          <legend><span>3</span>Qual é a ocasião?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="ocasiao" value="para usar no dia a dia"><span>Dia a dia</span></label>
+            <label class="chip"><input type="radio" name="ocasiao" value="para um aniversário"><span>Aniversário</span></label>
+            <label class="chip"><input type="radio" name="ocasiao" value="para noivado ou casamento"><span>Noivado ou casamento</span></label>
+            <label class="chip"><input type="radio" name="ocasiao" value="para uma data especial"><span>Outra data especial</span></label>
+          </div>
+        </fieldset>
+        <div class="name-field">
+          <label for="cliente-nome">Como podemos te chamar? <small>(opcional)</small></label>
+          <input id="cliente-nome" type="text" maxlength="40" autocomplete="given-name" placeholder="Seu nome">
+        </div>
+        <div class="message-preview">
+          <p class="preview-label">Sua mensagem</p>
+          <p class="preview-bubble" id="chooser-preview">Olá! Vim pelo site e gostaria de ajuda para escolher uma joia.</p>
+        </div>
+        <a class="button button-gold chooser-send" id="chooser-send" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Vim pelo site e gostaria de ajuda para escolher uma joia.">Enviar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+        <p class="chooser-hint">A conversa abre no seu WhatsApp. Nada é enviado sem o seu toque.</p>
+      </div>
+    </section>
+
+    <section class="steps section-space" id="como-funciona" aria-labelledby="steps-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Como funciona</p>
+        <h2 id="steps-title">Simples como <em>uma boa conversa</em></h2>
+        <p>Você tira todas as dúvidas antes de decidir. A gente acompanha cada passo.</p>
+      </div>
+      <ol class="step-list">
+        <li class="reveal"><span class="step-number">1</span><h3>Você chama a gente</h3><p>Pelo WhatsApp, com uma foto de referência ou só a ideia do que procura.</p></li>
+        <li class="reveal"><span class="step-number">2</span><h3>Mostramos as opções</h3><p>Apresentamos as peças disponíveis em ouro 18k e explicamos detalhes e valores.</p></li>
+        <li class="reveal"><span class="step-number">3</span><h3>A joia chega até você</h3><p>Enviamos para todo o Brasil ou você vem conhecer a loja em Teresina, com hora marcada.</p></li>
+      </ol>
+    </section>
+
+    <section class="essence section-space" id="essencia" aria-labelledby="essencia-title">
+      <div class="essence-copy reveal">
+        <p class="eyebrow">Sobre a Kesya</p>
+        <h2 id="essencia-title">Pode chamar. <em>A gente ajuda.</em></h2>
+        <p>Somos de Teresina e trabalhamos com joias em ouro 18k. Você pode conversar com a gente pelo WhatsApp, marcar uma visita ou pedir o envio para sua cidade.</p>
+        <p>Se estiver em dúvida, conte o que tem em mente: o tipo de peça, a ocasião e quanto pretende investir. A gente consulta as opções e explica os detalhes antes de você decidir.</p>
+        <a class="text-link" href="https://www.instagram.com/kesyajoias/" target="_blank" rel="noopener noreferrer">Acompanhe a loja no Instagram <span aria-hidden="true">↗</span></a>
+      </div>
+      <aside class="note-card reveal" aria-label="Recado da equipe">
+        <p class="note-label">Um recado nosso</p>
+        <blockquote><p>“Você não precisa saber o nome da peça nem entender de joias. Conta pra gente pra quem é e qual é a ocasião, que a gente encontra junto com você.”</p></blockquote>
+        <p class="note-sign">Equipe Kesya Joias</p>
+        <div class="visit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <div><strong>Teresina, Piauí</strong><span>Visitas com hora marcada. Enviamos o endereço pelo WhatsApp.</span></div>
+          <a class="text-link" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de marcar uma visita à Kesya Joias.">Marcar visita <span aria-hidden="true">↗</span></a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="wedding section-space" id="aliancas" aria-labelledby="aliancas-title">
+      <div class="wedding-art" aria-hidden="true"><span class="ring ring-a"></span><span class="ring ring-b"></span><span class="sparkle">✦</span></div>
+      <div class="wedding-content reveal">
+        <p class="eyebrow">Alianças em ouro 18k</p>
+        <h2 id="aliancas-title">Vamos escolher <em>as alianças de vocês?</em></h2>
+        <p>Mandem uma referência do que gostam, ou venham só com a vontade. A gente conversa com calma sobre cada detalhe.</p>
+        <ul class="wedding-topics"><li>Modelos disponíveis</li><li>Medidas</li><li>Valores</li></ul>
+        <a class="button button-light" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Queremos conhecer as alianças da Kesya. Pode nos ajudar a escolher?">Consultar alianças <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="faq section-space" id="duvidas" aria-labelledby="duvidas-title">
+      <div class="faq-intro reveal">
+        <p class="eyebrow">Dúvidas</p>
+        <h2 id="duvidas-title">Antes de <em>comprar</em></h2>
+        <p>Reunimos aqui as perguntas mais comuns sobre pagamento, entrega e atendimento.</p>
+        <div class="faq-help">
+          <p><strong>Não encontrou sua dúvida?</strong> Pergunte pra gente, sem cerimônia.</p>
+          <a class="text-link" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Tenho uma dúvida sobre as joias da Kesya.">Mandar minha pergunta <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="faq-list reveal">
+        <details><summary>As joias são em ouro 18k?<span aria-hidden="true">+</span></summary><p>A Kesya trabalha com joias em ouro 18k. Fale com a gente para conhecer as características e os detalhes de cada peça disponível.</p></details>
+        <details><summary>Vocês enviam para minha cidade?<span aria-hidden="true">+</span></summary><p>Enviamos para todo o Brasil. Informe seu CEP pelo WhatsApp para consultar o valor do frete e o prazo de entrega.</p></details>
+        <details><summary>Quais são as formas de pagamento?<span aria-hidden="true">+</span></summary><p>Você pode parcelar em até 12x no cartão. Consulte com a gente os valores e as condições de pagamento para a joia escolhida.</p></details>
+        <details><summary>Como funciona o atendimento presencial?<span aria-hidden="true">+</span></summary><p>Estamos em Teresina, Piauí, e atendemos com hora marcada. Chame a gente no WhatsApp para combinar seu horário e receber o endereço.</p></details>
+        <details><summary>Posso ver as peças antes de decidir?<span aria-hidden="true">+</span></summary><p>Pode, sim. Peça pelo WhatsApp e a gente apresenta as opções disponíveis e tira suas dúvidas. Você também encontra peças no Instagram @kesyajoias.</p></details>
+      </div>
+    </section>
+
+    <section class="contact section-space" id="contato" aria-labelledby="contato-title">
+      <div class="contact-avatar reveal"><img src="assets/kesya-logo.jpg" alt="" width="1080" height="1080" loading="lazy"></div>
+      <p class="eyebrow reveal">Fale com a gente</p>
+      <h2 class="reveal" id="contato-title">Gostou de alguma peça? <em>Chame a Kesya.</em></h2>
+      <p class="reveal">Pode mandar a foto de uma referência ou só contar o que está procurando. Vai ser um prazer ajudar.</p>
+      <div class="contact-actions reveal">
+        <a class="button button-gold" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" data-message="Olá! Gostaria de ajuda para escolher uma joia da Kesya.">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+        <a class="button button-outline" href="https://www.instagram.com/kesyajoias/" target="_blank" rel="noopener noreferrer">Ver o Instagram <span aria-hidden="true">↗</span></a>
+      </div>
+      <span class="contact-location">Teresina, PI · Atendimento com hora marcada</span>
+    </section>
   </main>
-  <footer><div class="footer-top"><a class="footer-wordmark" href="#inicio" aria-label="Kesya Joias — voltar ao início">Kesya<span>JOIAS</span></a><p>Joias em ouro 18k.<br>Teresina, Piauí.</p><div><a href="https://www.instagram.com/kesyajoias/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div><a class="back-top" href="#inicio">Voltar ao topo ↑</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> Kesya Joias. Todos os direitos reservados.</span><span>CNPJ 18.578.829/0001-31</span></div></footer>
-  <a class="floating-contact" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" aria-label="Converse com a Kesya pelo WhatsApp" data-message="Olá! Vim pelo site e gostaria de conhecer as joias da Kesya."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.7-5A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8 7.5c-2 3.5 5 9 7.5 6.5l-2-2-1.5 1c-1.5-.8-2.3-1.6-3-3l1-1.5Z"/></svg><span class="contact-label">Falar com a Kesya <span aria-hidden="true">↗</span></span></a>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand"><a class="footer-wordmark" href="#inicio" aria-label="Kesya Joias — voltar ao início">Kesya<span>JOIAS</span></a><p>Joias em ouro 18k, escolhidas com calma. De Teresina para todo o Brasil.</p></div>
+      <div class="footer-col"><p class="footer-title">Navegue</p><a href="#joias">Joias</a><a href="#escolher">Ajuda na escolha</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas</a></div>
+      <div class="footer-col"><p class="footer-title">Fale com a gente</p><a href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><a href="https://www.instagram.com/kesyajoias/" target="_blank" rel="noopener noreferrer">Instagram @kesyajoias ↗</a><span>Teresina, PI · hora marcada</span></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year">2026</span> Kesya Joias. Todos os direitos reservados.</span><span>CNPJ 18.578.829/0001-31</span><a class="back-top" href="#inicio">Voltar ao topo ↑</a></div>
+  </footer>
+
+  <div class="float-hint" hidden><p><strong>Oi! Posso ajudar?</strong> Chame a gente no WhatsApp para tirar dúvidas.</p><button class="float-hint-close" type="button" aria-label="Fechar aviso">×</button></div>
+  <a class="floating-contact" href="https://wa.me/558698340636" target="_blank" rel="noopener noreferrer" aria-label="Converse com a Kesya pelo WhatsApp" data-message="Olá! Vim pelo site e gostaria de conhecer as joias da Kesya."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.7-5A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8 7.5c-2 3.5 5 9 7.5 6.5l-2-2-1.5 1c-1.5-.8-2.3-1.6-3-3l1-1.5Z"/></svg><span class="contact-label">Falar com a Kesya</span></a>
 </body>
 </html>
